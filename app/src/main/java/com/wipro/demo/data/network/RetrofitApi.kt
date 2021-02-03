@@ -1,0 +1,14 @@
+package com.wipro.demo.data.network
+
+import io.reactivex.Observable
+import okhttp3.ResponseBody
+import retrofit2.Call
+import retrofit2.Response
+import retrofit2.http.GET
+import retrofit2.http.QueryMap
+import retrofit2.http.Url
+
+interface RetrofitApi {
+    @GET
+    fun getData(@Url path:String,@QueryMap option:HashMap<String,String>): Call<ResponseBody>
+}
